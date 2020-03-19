@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+
 module Benchmarker
   module Data
-    class Key < Model
+    class Concurrency < Base
     end
   end
 end

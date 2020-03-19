@@ -2,6 +2,8 @@
 
 module Benchmarker
   module Data
-    VERSION = "0.0.1"
+    class Value < Base
+      belongs_to :key
+    end
   end
 end

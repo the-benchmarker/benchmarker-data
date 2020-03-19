@@ -1,7 +1,9 @@
 # frozen_string_literal: true
+
 module Benchmarker
   module Data
-    class Concurrency < Model
+    class Framework < Base
+      belongs_to :language
     end
   end
 end
