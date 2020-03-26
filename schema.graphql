@@ -1,0 +1,54 @@
+
+type Query {
+  frameworks: [Framework!]
+  framework(id: ID!): Framework
+
+  languages: [Language!]
+  language(id: ID!): Language
+
+  concurrencys: [Concurrency!]
+  concurrency(id: ID!): Concurrency
+
+  keys: [Key!]
+  key(id: ID!): Key
+
+  metrics: [Metric!]
+  metric(id: ID!): Metric
+
+  values: [Value!]
+  value(id: ID!): Value
+}
+
+type Framework {
+  id: ID
+  label: String!
+  language: Language
+}
+
+type Langauge {
+  id: ID
+  label: String!
+}
+
+type Concurrency {
+  id: ID
+  level: Int
+}
+
+type Key {
+  id: ID
+  label: String!
+}
+
+type Metric {
+  id: ID
+  framework: Framework
+  value: Value
+  concurrency: Concurrency
+}
+
+type Value {
+  id: ID
+  value: Float
+  key: Key
+}
