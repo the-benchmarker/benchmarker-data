@@ -49,6 +49,6 @@ type Metric {
 
 type Value {
   id: ID
-  value: Int
+  value: Float
   key: Key
 }
